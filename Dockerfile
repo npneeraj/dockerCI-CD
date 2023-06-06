@@ -2,13 +2,13 @@ FROM python:3.10.0-alpine3.15
 
 #RUN apk add --no-cache curl
 
-WORKDIR /try
+WORKDIR ./try
 
 COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-COPY . /try
+COPY ./try
 
 EXPOSE 8000
 
