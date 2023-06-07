@@ -4,11 +4,11 @@ FROM python:3.10.0-alpine3.15
 
 WORKDIR ./clockbox
 
-COPY requirements.txt requirements.txt
+COPY ./requirements.txt /usr/src/app
 
 RUN pip install -r requirements.txt
 
-COPY . /app1
+COPY . /usr/src/app
 
 EXPOSE 8000
 
