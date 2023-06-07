@@ -34,7 +34,7 @@ ENV PYTHONUNBUFFERED 1
 # install dependencies
 RUN pip install --upgrade pip 
 COPY ./clockbox/requirements.txt /usr/src/app
-RUN PYTHONPATH=/usr/bin/python pip install -r requirements.txt
+RUN  pip install -r requirements.txt
 
 # copy project
 COPY . /usr/src/app
