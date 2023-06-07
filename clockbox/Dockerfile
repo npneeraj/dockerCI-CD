@@ -4,6 +4,8 @@ FROM python:3.10.0-alpine3.15
 
 WORKDIR ./clockbox
 
+RUN pip install --upgrade pip 
+
 COPY ./clockbox/requirements.txt /usr/src/app
 
 RUN pip install -r requirements.txt
