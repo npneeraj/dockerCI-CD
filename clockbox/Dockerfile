@@ -34,12 +34,14 @@ ENV PYTHONUNBUFFERED 1
 # install dependencies
 RUN pip install --upgrade pip 
 COPY ./clockbox/requirements.txt /usr/src/app
-RUN  pip install -r requirements.txt
+# RUN  pip install -r requirements.txt
 
 # copy project
 COPY . /usr/src/app 
 
 WORKDIR ./usr/src/app/clockbox
+
+RUN  pip install -r requirements.txt
 
 EXPOSE 8000
 
